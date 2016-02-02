@@ -11,32 +11,64 @@ package lab2;
  */
 public class Triangle {
     
-    // Triangle needs 3 sides
+    /**
+     * Side A of the triangle
+     */
     public int sideA;
+    /**
+     * Side B of the triangle
+     */
     public int sideB;
+    /**
+     * Side C of the triangle
+     */
     public int sideC;
     
-    // Constructor takes in 3 values
+    /**
+     * 
+     * @param a input of side a of the triangle
+     * @param b input of side b of the triangle
+     * @param c input of side c of the triangle
+     */
     public Triangle(int a, int b, int c)
     {
+        sideA = a;
+        sideB = b;
+        sideC = c;
     }
     
-    public void SetA(int newVal)
+    /**
+     * Set the value of A and use this for getting in the main method after
+     * @return sideA
+     */
+    public int getA()
     {
-        sideA = newVal;
+        return sideA;
     }
     
-    public void SetB(int newVal)
+    /**
+     * Set the value of B and use this for getting in the main method after
+     * @return sideB
+     */
+    public int getB()
     {
-        sideB = newVal;
+        return sideB;
     }
     
-    public void SetC(int newVal)
+    /**
+     * Set the value of C and use this for getting in the main method after
+     * @return SideC
+     */
+    public int getC()
     {
-        sideC = newVal;
+        return sideC;
     }
     
-    public boolean isTrinagle()
+    /**
+     * Check if the triangle is valid and return the correct boolean
+     * @return true or false
+     */
+    public boolean isTriangle()
     {
         if(sideA + sideB > sideC && sideB + sideC > sideA && sideC + sideA > sideB )
         {
@@ -48,8 +80,21 @@ public class Triangle {
         }
     }
     
+    /**
+     * Calculate if triangle is right angled and send the appropriate boolean value
+     * @return true or false
+     */
     public boolean isRight()
     {
-        return true;
+        double cPower = Math.pow((double)sideC, 2.0);
+        
+        if(cPower == Math.sqrt(Math.pow((double)sideA, 2.0)) + Math.pow((double)sideB, 2.0))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
