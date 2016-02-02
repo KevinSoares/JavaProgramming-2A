@@ -5,6 +5,8 @@
  */
 package lab2;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Kevin Soares
@@ -16,6 +18,17 @@ public class Lab2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        int triangleSideA;
+        int triangleSideB;
+        int triangleSideC;
+        
+        // Create Scanner to get user input
+        Scanner input = new Scanner(System.in);
+        
+        // Set our triangle sides locally
+        triangleSideA = input.nextInt();
+        
+        
     }
     
 }

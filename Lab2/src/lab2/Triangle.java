@@ -21,9 +21,31 @@ public class Triangle {
     {
     }
     
+    public void SetA(int newVal)
+    {
+        sideA = newVal;
+    }
+    
+    public void SetB(int newVal)
+    {
+        sideB = newVal;
+    }
+    
+    public void SetC(int newVal)
+    {
+        sideC = newVal;
+    }
+    
     public boolean isTrinagle()
     {
-        return true;
+        if(sideA + sideB > sideC && sideB + sideC > sideA && sideC + sideA > sideB )
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
     
     public boolean isRight()
