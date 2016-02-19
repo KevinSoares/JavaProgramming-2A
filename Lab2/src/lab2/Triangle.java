@@ -86,15 +86,10 @@ public class Triangle {
      */
     public boolean isRight()
     {
+        double aPower = Math.pow((double)sideA, 2.0);
+        double bPower = Math.pow((double)sideB, 2.0);
         double cPower = Math.pow((double)sideC, 2.0);
         
-        if(cPower == Math.sqrt(Math.pow((double)sideA, 2.0)) + Math.pow((double)sideB, 2.0))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return aPower + bPower == cPower;
     }
 }
